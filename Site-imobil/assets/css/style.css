@@ -313,28 +313,16 @@ footer .footer-company .footer-logo {
     margin-bottom: 16px;
 }
 
-footer .footer-company p {
-    font-weight: 300;
-    font-size: 12px;
-}
-
 footer .footer-menu {
     font-weight: 300;
     font-size: 14px;
 }
 
-footer .footer-menu-tittle {
-    font-weight: 400;
-    font-size: 16px;
-}
-
 footer .footer-menu ul {
     list-style-type: none;
-    margin-top: 16px;
-}
-
-footer .footer-menu li {
-    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 footer .footer-menu a {
@@ -350,7 +338,6 @@ footer .footer-social {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 24px;
 
 }
 
