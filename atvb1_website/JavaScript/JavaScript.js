@@ -1,0 +1,3 @@
+function clickbotao(){
+    alert('CERTAin');
+} 
