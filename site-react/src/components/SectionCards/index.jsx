@@ -1,109 +1,45 @@
-import  './style.css';
-import imgLogo from '../../assets/img/thumb1.png';
+import { IntlProvider, FormattedNumber } from 'react-intl';
+import { useImovel } from '../../hook/useImovel';
+
+import './style.css';
+
 
 export function SectionCards() {
+
+    const { imoveis } = useImovel();
+
     return (
-            <section id="cards">
-                    <h2>Imóveis disponíveis</h2>
-                    <div className="cards-content">
-                        <div className="card">
-                            <img src={imgLogo} alt="Casa 1" />
-                            <div className="card-content">
+        <section id="cards">
+            <h2>Imóveis disponíveis</h2>
 
-                                <h4>reprehenderit minima at quibusdam earum! Voluptatibus quam esse voluptas ad, cupiditate
-                                    laborum magnam
-                                    aperiam! Nobis, dolorum!</h4>
+            {imoveis.length > 0 ? (<div className="cards-content">
 
-                                <p> expedita modi laborum eius accusamus vel. Omnis odio ipsam ex natus earum voluptatum
-                                    quam dolores?</p>
+                {imoveis.map((item, index) => (
+                    <div key={index} className="card">
+                        <img src={item.foto} alt="Casa 1" />
+                        <div className="card-content">
+                            <h4>{item.titulo}</h4>
+                            <p>{item.descricao}</p>
 
-                                <div className="card-price">
-                                    <p>R$ 900.000,00</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={imgLogo} alt="Casa 2" />
-                            <div className="card-content">
-
-                                <h4>reprehenderit minima at quibusdam earum! Voluptatibus quam esse voluptas ad, cupiditate
-                                    laborum magnam
-                                    aperiam! Nobis, dolorum!</h4>
-
-                                <p> expedita modi laborum eius accusamus vel. Omnis odio ipsam ex natus earum voluptatum
-                                    quam dolores?</p>
-                                <div className="card-price">
-                                    <p>R$ 900.000,00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={imgLogo} alt="Casa 3" />
-                            <div className="card-content">
-
-                                <h4>reprehenderit minima at quibusdam earum! Voluptatibus quam esse voluptas ad, cupiditate
-                                    laborum magnam
-                                    aperiam! Nobis, dolorum!</h4>
-
-                                <p> expedita modi laborum eius accusamus vel. Omnis odio ipsam ex natus earum voluptatum
-                                    quam dolores?</p>
-                                <div className="card-price">
-                                    <p>R$ 900.000,00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={imgLogo} alt="Casa 4" />
-                            <div className="card-content">
-
-                                <h4>reprehenderit minima at quibusdam earum! Voluptatibus quam esse voluptas ad, cupiditate
-                                    laborum magnam
-                                    aperiam! Nobis, dolorum!</h4>
-
-                                <p> expedita modi laborum eius accusamus vel. Omnis odio ipsam ex natus earum voluptatum
-                                    quam dolores?</p>
-                                <div className="card-price">
-                                    <p>R$ 900.000,00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={imgLogo} alt="Casa 5" />
-                            <div className="card-content">
-
-                                <h4>reprehenderit minima at quibusdam earum! Voluptatibus quam esse voluptas ad, cupiditate
-                                    laborum magnam</h4>
-
-                                <p> expedita modi laborum eius accusamus vel. Omnis odio ipsam ex natus earum voluptatum
-                                    quam dolores?</p>
-                                <div className="card-price">
-                                    <p>R$ 900.000,00</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={imgLogo} alt="Casa 6" />
-                            <div className="card-content">
-
-                                <h4>reprehenderit minima at quibusdam earum! Voluptatibus quam esse voluptas ad, cupiditate
-                                    laborum magnam
-                                    aperiam! Nobis, dolorum!</h4>
-
-                                <p> expedita modi laborum eius accusamus vel. Omnis odio ipsam ex natus earum voluptatum
-                                    quam dolores?</p>
-                                <div className="card-price">
-                                    <p>R$ 900.000,00</p>
-                                </div>
+                            <div className="card-price">
+                                <p>
+                                    <IntlProvider locale="pt-BR">
+                                        <FormattedNumber value={item.preco}
+                                            style="currency"
+                                            currency="BRL" />
+                                    </IntlProvider>
+                                </p>
                             </div>
                         </div>
                     </div>
-                </section>
+                ))}
 
+            </div>
+            ) : (
+                <h3 classname="not-found"> Nenhum Imóvel foi encontrado! </h3>
+            )}
+
+
+        </section>
     )
 }

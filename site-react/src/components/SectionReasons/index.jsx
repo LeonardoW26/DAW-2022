@@ -1,6 +1,6 @@
 import './style.css';
 
-export function SetionReasons() {
+export function SectionReasons() {
     return (
             <section id="reasons">
                     <h2>Por que nos escolher?</h2>
