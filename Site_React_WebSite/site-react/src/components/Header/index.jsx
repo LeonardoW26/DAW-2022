@@ -1,14 +1,13 @@
+import imgLogo from '../../assets/img/voeX.png';
+import './style.css';
 
-import '../../assets/img/voeX.png';
-import 'style.css';
 
-
-export function Home() {
+export function Header() {
     return (
         <header>
-            <div class="container">
-                <div class="brand">
-                    <a href="index.html"><img src="../CSS/img/voe-removebg-preview (1).png" alt="Logo Startup VOEx"/></a>
+            <div className="container">
+                <div className="brand">
+                    <a href="index.html"><img src={imgLogo} alt="Logo Startup VOEx"/></a>
 
                     <input type="text" placeholder="&#xF002; Pesquisar ..." style="font-family: Arial, 'Font Awesome 5 Free'" />
 
@@ -17,7 +16,7 @@ export function Home() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="#" class="active">Home</a>
+                            <a href="#" className="active">Home</a>
                         </li>
 
                         <li>
@@ -38,7 +37,6 @@ export function Home() {
 
                     </ul>
                 </nav>
-
 
             </div>
         </header>

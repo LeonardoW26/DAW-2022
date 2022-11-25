@@ -1,7 +1,7 @@
-import { Footer } from '../../components/Footer';
-import { Main1 } from '../../components/Main1';
+import img from '../../assets/img/voeX.png';
+import './style.css';
 
-export function Home() {
+export function HomePage() {
     return (
         <div id="home">
             <div className="container">
@@ -16,7 +16,7 @@ export function Home() {
                     </div>
 
                     <div className="botao-content">
-                        <a href="index2.html"><button className="botao" >Montar Viagem</button></a>
+                        <a href="/viagens" className="botao" >Montar Viagem</a>
                     </div>
 
                 </div>
