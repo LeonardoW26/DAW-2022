@@ -31,8 +31,7 @@ header ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap: 22px;
-    left: 50px;
+    gap: 110px;
 }
 
 header  input {
