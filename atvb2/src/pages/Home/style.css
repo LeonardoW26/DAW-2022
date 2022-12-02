@@ -1,10 +1,35 @@
-body .banner {
+#home {
+    position: relative; 
+    height: 86.2vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home::before {
+    content: '';
+    background: url(../../assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
-    top: 20%;
-    right: 27%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+    /*background-size: cover;
+    */
 }
 
-body .botao {
+#home .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;opacity: 1;
+}
+
+#home .botao {
     display: flex;
     border: none;
     border-radius: 50px;
@@ -21,8 +46,7 @@ body .botao {
     box-shadow: 6px 7px 4px -3px rgba(0,0,0,0.51);
 }
 
-body .botao-content {
-    position: absolute;
+#home .botao-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,24 +54,12 @@ body .botao-content {
     top: 72%;
     right: 41%;
 }
-body .botao-content a {
+#home .botao-content a {
     text-decoration: none;
     color:black;
 }
 
-body .botao:hover {
+#home .botao:hover {
     color: #ED5A22;
     border-bottom: 2px solid #ED5A22;
-}
-
-main .background {
-    height: 86.7%;
-    background: url(../CSS/img/kfaksdhgdfsjk.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-}
-
-body {
-    background-color: #edf1f5;
 }

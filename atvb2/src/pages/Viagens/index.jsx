@@ -10,13 +10,18 @@ import img6 from '../../assets/img/Salvador.jpg';
 import img7 from '../../assets/img/carlos.webp';
 import img8 from '../../assets/img/saopaulo.jpg';
 
+import img9 from '../../assets/img/voeX.png';
+
 export function ViagensPage() {
     return (
         <div className="viagens-page">
+            <main>
             <div className="container">
-                <h1>Match de rotas para você:</h1>
+                <h3>Match de rotas para você:</h3>
 
-                <div className="cards">
+                <div className="cards"
+                
+                >
                     <div className="card">
                         <p>Foz do Iguaçu, PR</p>
                         <img src={img} alt="Imagem de Foz" />
@@ -62,17 +67,18 @@ export function ViagensPage() {
                         <img src={img8} alt="Imagem de SP" />
                     </div>
                 </div>
-
+                
 
             </div >
+            </main>
             <div className="footer-viagens">
-                <div className="footer">
+                <footer>
                     <div className="container">
                         <div className="footer-content">
                             <div className="footer-company">
 
                                 <div className="imgFooter">
-                                    <img src="../CSS/img/voe-removebg-preview (1).png" alt="Logo" />
+                                    <img src={img9} alt="Logo" />
                                 </div>
 
                                 <div className="footer-menu">
@@ -97,7 +103,7 @@ export function ViagensPage() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </footer>
             </div>
         </div>
 

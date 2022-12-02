@@ -6,19 +6,12 @@ export function HomePage() {
         <div id="home">
             <div className="container">
 
+                <div className="banner">
+                    <img src={img} alt="BANNER Startup VOEx" />
+                </div>
 
-                <div className="container2">
-                    <div className="background">
-                    </div>
-
-                    <div className="banner">
-                        <img src={img} alt="BANNER Startup VOEx" />
-                    </div>
-
-                    <div className="botao-content">
-                        <a href="/viagens" className="botao" >Montar Viagem</a>
-                    </div>
-
+                <div className="botao-content">
+                    <a href="/viagens" className="botao" >Montar Viagem</a>
                 </div>
 
 
